@@ -18,8 +18,7 @@
     </form>
     <div class="links">
         <a href="register.php">Đăng ký</a>
-        <a href="forgot_password.php">Quên mật khẩu?</a>
-    </div>
+        <a href="{{ route('forgot.password') }}">Quên mật khẩu?</a>    </div>
 </div>
 </body>
 </html>
