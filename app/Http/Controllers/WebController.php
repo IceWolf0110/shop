@@ -8,7 +8,8 @@ use Illuminate\View\View;
 
 class WebController extends Controller
 {
-    public function index(): View {
+    public function index(): View
+    {
         $products = Product::all();
         $seo = [
             'title' => "Home"
@@ -24,10 +25,15 @@ class WebController extends Controller
 
     public function detail($id): View
     {
-        if (empty($id))
+        if (empty($id)) {
             abort(404);
+        }
 
         $product = Product::where('id', $id)->first();
+
+        if (!$product) {
+            abort(404);
+        }
 
         $seo = [
             'title' => $product->name,
@@ -39,5 +45,14 @@ class WebController extends Controller
         ];
 
         return view('detail.index', $data);
+    }
+
+    public function adminDashboard(): View
+    {
+        $seo = [
+            'title' => 'Trang quản trị'
+        ];
+
+        return view('admin.dashboard', compact('seo'));
     }
 }

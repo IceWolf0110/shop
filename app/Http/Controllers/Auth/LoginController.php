@@ -14,11 +14,21 @@ class LoginController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('/');
+{
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
+        $user = Auth::user();
+
+        if ($user->role === 'admin') {
+            return redirect()->route('admin.dashboard'); // Trang admin
+        } else {
+            return redirect()->route('home'); // Trang home như bạn gửi
         }
-        return back()->withErrors(['email' => 'Sai tài khoản hoặc mật khẩu']);
     }
+
+    return back()->withErrors([
+        'email' => 'Tài khoản hoặc mật khẩu không đúng.',
+    ]);
+}
 }

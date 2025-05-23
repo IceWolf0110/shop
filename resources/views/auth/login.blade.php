@@ -11,13 +11,16 @@
     <?php if (isset($error)): ?>
         <div class="error"><?php echo $error; ?></div>
     <?php endif; ?>
-    <form method="POST" action="">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Mật khẩu" required>
-        <button type="submit">Đăng nhập</button>
+
+    <form method="POST" action="{{ route('login') }}">
+    @csrf
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Mật khẩu" required>
+    <button type="submit">Đăng nhập</button>
     </form>
+    
     <div class="links">
-        <a href="register.php">Đăng ký</a>
+        <a href="{{ route('register') }}">Register</a>
         <a href="{{ route('forgot.password') }}">Quên mật khẩu?</a>    </div>
 </div>
 </body>
