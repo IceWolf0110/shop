@@ -21,10 +21,10 @@
                                         <a href="#" id="logoutBtn"><i class="fa fa-sign-out"></i> Logout</a>
                                     </li>
                                     <li id="loginLi" style="display: <?php echo isset($_SESSION['user_id']) ? 'none' : 'block'; ?>">
-                                        <a href="LoginController/index"><i class="fa fa-sign-in"></i> Sign In</a>
+                                        <a href="{{ route('login') }}">Sign In</a>
                                     </li>
                                     <li id="registerLi" style="display: <?php echo isset($_SESSION['user_id']) ? 'none' : 'block'; ?>">
-                                        <a href="RegisterController/index"><i class="fa fa-user-plus"></i> Register</a>
+                                        <a href="{{ route('register') }}">Register</a>
                                     </li>
                                 </ul>
                             </li>
@@ -42,7 +42,7 @@
             <div class="row">
                 <div class="col-lg-12 text-right">
                     <div class="logo_container">
-                        <a href="#">HC <span>shop</span></a>
+                        <a href="#">HC<span>shop</span></a>
                     </div>
                     <nav class="navbar">
                         <ul class="navbar_menu">
