@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Product 3',
-                'image' => 'product_1.png',
+                'image' => 'product_3.png',
                 'price' => 220,
                 'description' => 'Mô tả sản phẩm 3',
                 'category' => '',
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Product 4',
-                'image' => 'product_1.png',
+                'image' => 'product_4.png',
                 'price' => 150,
                 'description' => 'Mô tả sản phẩm 4',
                 'category' => '',
@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Product 5',
-                'image' => 'product_1.png',
+                'image' => 'product_5.png',
                 'price' => 250,
                 'description' => 'Mô tả sản phẩm 5',
                 'category' => '',
@@ -74,7 +74,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Product 6',
-                'image' => 'product_1.png',
+                'image' => 'product_6.png',
                 'price' => 310,
                 'description' => 'Mô tả sản phẩm 6',
                 'category' => '',
@@ -83,7 +83,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Product 7',
-                'image' => 'product_1.png',
+                'image' => 'product_7.png',
                 'price' => 299,
                 'description' => 'Mô tả sản phẩm 7',
                 'category' => '',
@@ -92,7 +92,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Product 8',
-                'image' => 'product_1.png',
+                'image' => 'product_8.png',
                 'price' => 430,
                 'description' => 'Mô tả sản phẩm 8',
                 'category' => '',
@@ -101,7 +101,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Product 9',
-                'image' => 'product_1.png',
+                'image' => 'product_9.png',
                 'price' => 410,
                 'description' => 'Mô tả sản phẩm 9',
                 'category' => '',

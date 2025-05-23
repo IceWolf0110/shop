@@ -24,6 +24,8 @@
             <?=file_get_contents('styles/responsive.css')?>
             <?=file_get_contents('styles/nutaddtocart.css')?>
             <?=file_get_contents('styles/sanpham.css')?>
+            <?=file_get_contents('styles/detail.css')?>
+            <?=file_get_contents('styles/single_styles.css')?>
         </style>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -41,6 +43,8 @@
         <script src="js/slider.js"></script>
         <script src="js/addtocart.js"></script>
         <script src="js/size.v2.js"></script>
+
+        @yield('script')
     </head>
     <body>
         <div class="super_container">

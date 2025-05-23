@@ -109,7 +109,7 @@ text-muted {
   text-size: 20px;
 }
 .image-viewer {
-  min-height: 350px;
+  /*min-height: 350px;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,7 +123,7 @@ text-muted {
   margin: 0 auto;
 }
 .product-info {
-  min-height: 350px;
+  /*min-height: 350px;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
