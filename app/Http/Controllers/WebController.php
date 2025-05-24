@@ -47,6 +47,11 @@ class WebController extends Controller
         return view('detail.index', $data);
     }
 
+    public function contact(): View
+    {
+        return view('contact.index');
+    }
+
     public function adminDashboard(): View
     {
         $seo = [

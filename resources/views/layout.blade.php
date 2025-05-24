@@ -28,6 +28,8 @@
             <?=file_get_contents('styles/single_styles.css')?>
         </style>
 
+        @yield('head')
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>

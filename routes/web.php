@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\Auth\LoginController;
@@ -18,6 +19,8 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 Route::get('/', [WebController::class, 'index'])->name('home');
+
+Route::get('/contact', [WebController::class, 'contact'])->name('contact');
 
 Route::get('/product/{id}', [WebController::class, 'detail'])
     ->where('id', '\d+')

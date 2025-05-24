@@ -9,7 +9,7 @@
 <div class="login-box">
     <h2>Đăng nhập tài khoản</h2>
     <?php if (isset($error)): ?>
-        <div class="error"><?php echo $error; ?></div>
+        <div class="error">{{ $error }}</div>
     <?php endif; ?>
 
     <form method="POST" action="{{ route('login') }}">
@@ -18,7 +18,7 @@
     <input type="password" name="password" placeholder="Mật khẩu" required>
     <button type="submit">Đăng nhập</button>
     </form>
-    
+
     <div class="links">
         <a href="{{ route('register') }}">Register</a>
         <a href="{{ route('forgot.password') }}">Quên mật khẩu?</a>    </div>
