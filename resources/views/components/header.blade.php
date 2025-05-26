@@ -35,6 +35,7 @@
         </flux:menu>
     </flux:dropdown>
 </flux:header>
+
 <flux:sidebar stashable="true" sticky="true" class="lg:hidden bg-zinc-50 dark:bg-zinc-900 border rtl:border-r-0 rtl:border-l border-zinc-200 dark:border-zinc-700">
     <flux:sidebar.toggle class="lg:hidden" icon="x-mark"/>
     <flux:brand href="#" logo="https://fluxui.dev/img/demo/logo.png" name="Acme Inc." class="px-2 dark:hidden"/>
