@@ -1,17 +1,10 @@
 <?php
+use function Livewire\Volt\{state, title};
+state([]);
 
-use function Livewire\Volt\{title, layout};
-
-layout('components.layouts.app');
-
-title('Home');
-
+title("Home");
 ?>
 
 <div>
-    <div class="min-h-screen">
-        <div class="container mx-auto">
-            hello world
-        </div>
-    </div>
+    hello world
 </div>

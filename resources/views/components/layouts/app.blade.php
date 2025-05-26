@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>{{ $title ?? config('app.name') }}</title>
-
+        <title>{{ $title ?? 'Page Title' }}</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @fluxAppearance
     </head>
-    <body>
-        <livewire:header/>
-        {{ $slot }}
+    <body class="min-h-screen bg-white dark:bg-zinc-800">
+        <x-header/>
+        <flux:main container>
+            {{ $slot }}
+        </flux:main>
         @fluxScripts
     </body>
 </html>
