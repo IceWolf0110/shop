@@ -72,6 +72,6 @@
     <script>
         setInterval(() => {
             $wire.nextSlide()
-        }, 5000);
+        }, 2500);
     </script>
 @endscript
