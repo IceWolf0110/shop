@@ -1,37 +1,37 @@
 <?php
-    use function Livewire\Volt\{state, title};
+use function Livewire\Volt\{state, title};
 
-    $slideData = [
-        [
-            'title' => 'New Arrivals',
-            'button_text' => 'Shop Now',
-            'button_link' => '#',
-            'image' => 'https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg',
-        ],
-        [
-            'title' => 'Winter Collection',
-            'button_text' => 'Explore Now',
-            'button_link' => '#',
-            'image' => 'https://t3.ftcdn.net/jpg/09/06/74/68/360_F_906746819_G350quPPf6QjxjIEJYMDiOO7nlIHBPww.jpg',
-        ],
-        [
-            'title' => 'Summer Sale',
-            'button_text' => 'Shop Sale',
-            'button_link' => '#',
-            'image' => 'https://img.freepik.com/premium-photo/green-chameleon-closeup-stylish-wallpaper-picture-picture-high-resolution-detail-bright-saturated-colors-nature-fauna-disguise-change-color-observe-branch-tree-blurred-background-ai_399089-6725.jpg',
-        ],
-    ];
+$slideData = [
+    [
+        'title' => 'New Arrivals',
+        'button_text' => 'Shop Now',
+        'button_link' => '#',
+        'image' => 'https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg',
+    ],
+    [
+        'title' => 'Winter Collection',
+        'button_text' => 'Explore Now',
+        'button_link' => '#',
+        'image' => 'https://t3.ftcdn.net/jpg/09/06/74/68/360_F_906746819_G350quPPf6QjxjIEJYMDiOO7nlIHBPww.jpg',
+    ],
+    [
+        'title' => 'Summer Sale',
+        'button_text' => 'Shop Sale',
+        'button_link' => '#',
+        'image' => 'https://img.freepik.com/premium-photo/green-chameleon-closeup-stylish-wallpaper-picture-picture-high-resolution-detail-bright-saturated-colors-nature-fauna-disguise-change-color-observe-branch-tree-blurred-background-ai_399089-6725.jpg',
+    ],
+];
 
-    state([
-        'slides' => $slideData,
-        'currentSlide' => 0,
-    ]);
+state([
+    'slides' => $slideData,
+    'currentSlide' => 0,
+]);
 
-    title("Home");
+title("Home");
 
-    $nextSlide = fn() => $this->currentSlide = ($this->currentSlide + 1) % count($this->slides);
-    $prevSlide = fn() => $this->currentSlide = ($this->currentSlide - 1 + count($this->slides)) % count($this->slides);
-    $goToSlide = fn($index) => $this->currentSlide = $index;
+$nextSlide = fn() => $this->currentSlide = ($this->currentSlide + 1) % count($this->slides);
+$prevSlide = fn() => $this->currentSlide = ($this->currentSlide - 1 + count($this->slides)) % count($this->slides);
+$goToSlide = fn($index) => $this->currentSlide = $index;
 ?>
 
 <div>
@@ -70,9 +70,9 @@
 </div>
 
 @script
-    <script>
-        setInterval(() => {
-            $wire.nextSlide()
-        }, 2500);
-    </script>
+<script>
+    setInterval(() => {
+        $wire.nextSlide()
+    }, 2500);
+</script>
 @endscript

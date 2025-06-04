@@ -2,6 +2,6 @@
     'title' => $title ?? config('app.name')
 ])
 
-<x-layouts.app.layout :title="$title">
+<x-layouts.auth.layout :title="$title">
     {{ $slot }}
-</x-layouts.app.layout>
+</x-layouts.auth.layout>

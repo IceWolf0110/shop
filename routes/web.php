@@ -1,7 +1,8 @@
 <?php
 
-//use Illuminate\Support\Facades\Route;
-use \Livewire\Volt\Volt;
+use Illuminate\Support\Facades\Route;
+use Livewire\Volt\Volt;
 
-Volt::route('/', 'home')->name('home');
-Volt::route('/contact', 'contact')->name('contact');
+Volt::route('/', 'app.home')->name('home');
+
+require __DIR__.'/auth.php';
